@@ -5,183 +5,178 @@
 //     apple-device-names may be freely distributed under the MIT license.
 
 ;(function () {
-  function _convertMacbookPro(code) {
+  function _convertMacbookPro(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /11[_,][4,5]/.test(code): return '(Retina, 15-inch, Mid 2015)';
-      case /11[_,][2,3]/.test(code): return '(Retina, 15-inch, Mid 2014)';
-      case /12[_,]1/.test(code): return '(Retina, 13-inch, Early 2015)';
-      case /11[_,]1/.test(code): return '(Retina, 13-inch, Mid 2014)';
-      case /10[_,]2/.test(code): return '(Retina, 13-inch, Early 2013)';
-      case /10[_,]1/.test(code): return '(Retina, 15-inch, Early 2013)';
-      case /9[_,]2/.test(code): return '(13-inch, Mid 2012)';
-      case /9[_,]1/.test(code): return '(15-inch, Mid 2012)';
-      case /8[_,]3/.test(code): return '(17-inch, Late 2011)';
-      case /8[_,]2/.test(code): return '(15-inch, Late 2011)';
-      case /8[_,]1/.test(code): return '(13-inch, Late 2011)';
-      case /7[_,]1/.test(code): return '(13-inch, Mid 2010)';
-      case /6[_,]2/.test(code): return '(15-inch, Mid 2010)';
-      case /6[_,]1/.test(code): return '(17-inch, Mid 2010)';
-      case /5[_,]5/.test(code): return '(13-inch, Mid 2009)';
-      case /5[_,]3/.test(code): return '(15-inch, Mid 2009)';
-      case /5[_,]2/.test(code): return '(17-inch, Mid 2009)';
-      case /5[_,]1/.test(code): return '(Late 2008)';
-      case /4[_,]1/.test(code): return '(Early 2008)';
-      case /3[_,]1/.test(code): return '(Late 2007)';
-      case /2[_,]2/.test(code): return '(15-inch, Core 2 Duo)';
-      case /2[_,]1/.test(code): return '(17-inch, Core 2 Duo)';
-      case /1[_,]2/.test(code): return '(17-inch)';
-      case /1[_,]1/.test(code): return '(15-inch, Glossy)';
-    }
+    if (/11[_,][4,5]/.test(code)) return 'Retina, 15", Mid 2015';
+    if (/11[_,][2,3]/.test(code)) return 'Retina, 15", Mid 2014';
+    if (/12[_,]1/.test(code)) return 'Retina, 13", Early 2015';
+    if (/11[_,]1/.test(code)) return 'Retina, 13", Mid 2014';
+    if (/10[_,]2/.test(code)) return 'Retina, 13", Early 2013';
+    if (/10[_,]1/.test(code)) return 'Retina, 15", Early 2013';
+    if (/9[_,]2/.test(code)) return '13", Mid 2012';
+    if (/9[_,]1/.test(code)) return '15", Mid 2012';
+    if (/8[_,]3/.test(code)) return '17", Late 2011';
+    if (/8[_,]2/.test(code)) return '15", Late 2011';
+    if (/8[_,]1/.test(code)) return '13", Late 2011';
+    if (/7[_,]1/.test(code)) return '13", Mid 2010';
+    if (/6[_,]2/.test(code)) return '15", Mid 2010';
+    if (/6[_,]1/.test(code)) return '17", Mid 2010';
+    if (/5[_,]5/.test(code)) return '13", Mid 2009';
+    if (/5[_,]3/.test(code)) return '15", Mid 2009';
+    if (/5[_,]2/.test(code)) return '17", Mid 2009';
+    if (/5[_,]1/.test(code)) return 'Late 2008';
+    if (/4[_,]1/.test(code)) return 'Early 2008';
+    if (/3[_,]1/.test(code)) return 'Late 2007';
+    if (/2[_,]2/.test(code)) return '15", Core 2 Duo';
+    if (/2[_,]1/.test(code)) return '17", Core 2 Duo';
+    if (/1[_,]2/.test(code)) return '17"';
+    if (/1[_,]1/.test(code)) return '15", Glossy';
+    return opts.noMatchString;
   }
 
-  function _convertMacbookAir(code) {
+  function _convertMacbookAir(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /7[_,]2/.test(code): return '(13-inch, Early 2015)';
-      case /7[_,]1/.test(code): return '(11-inch, Early 2015)';
-      case /6[_,]2/.test(code): return '(13-inch, Mid 2013/Early 2014)';
-      case /6[_,]1/.test(code): return '(11-inch, Mid 2013/Early 2014)';
-      case /5[_,]2/.test(code): return '(13-inch, Mid 2012)';
-      case /5[_,]1/.test(code): return '(11-inch, Mid 2012)';
-      case /4[_,]2/.test(code): return '(13-inch, Mid 2011)';
-      case /4[_,]1/.test(code): return '(11-inch, Mid 2011)';
-      case /3[_,]2/.test(code): return '(13-inch, Late 2010)';
-      case /3[_,]1/.test(code): return '(11-inch, Late 2010)';
-      case /2[_,]1/.test(code): return '(Late 2008/Mid 2009)';
-      case /1[_,]1/.test(code): return '(Original Model)';
-    }
+    if (/7[_,]2/.test(code)) return '13", Early 2015';
+    if (/7[_,]1/.test(code)) return '11", Early 2015';
+    if (/6[_,]2/.test(code)) return '13", Mid 2013/Early 2014';
+    if (/6[_,]1/.test(code)) return '11", Mid 2013/Early 2014';
+    if (/5[_,]2/.test(code)) return '13", Mid 2012';
+    if (/5[_,]1/.test(code)) return '11", Mid 2012';
+    if (/4[_,]2/.test(code)) return '13", Mid 2011';
+    if (/4[_,]1/.test(code)) return '11", Mid 2011';
+    if (/3[_,]2/.test(code)) return '13", Late 2010';
+    if (/3[_,]1/.test(code)) return '11", Late 2010';
+    if (/2[_,]1/.test(code)) return 'Late 2008/Mid 2009';
+    if (/1[_,]1/.test(code)) return 'Original Model';
+    return opts.noMatchString;
   }
 
-  function _convertMacbook(code) {
+  function _convertMacbook(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /8[_,]1/.test(code): return '(Retina, 12-inch, Early 2015)';
-      case /7[_,]1/.test(code): return '(13-inch, Mid 2010)';
-      case /6[_,]1/.test(code): return '(13-inch, Late 2009)';
-      case /5[_,]2/.test(code): return '(13-inch, Mid 2009)';
-      case /5[_,]1/.test(code): return '(13-inch, Aluminum, Late 2008)';
-      case /4[_,]1/.test(code): return '(13-inch, Late 2007)';
-      case /3[_,]1/.test(code): return '(13-inch, Late 2007)';
-      case /2[_,]1/.test(code): return '(13-inch, Mid 2007)';
-      case /1[_,]1/.test(code): return '(Original Model)';
-    }
+    if (/8[_,]1/.test(code)) return 'Retina, 12", Early 2015';
+    if (/7[_,]1/.test(code)) return '13", Mid 2010';
+    if (/6[_,]1/.test(code)) return '13", Late 2009';
+    if (/5[_,]2/.test(code)) return '13", Mid 2009';
+    if (/5[_,]1/.test(code)) return '13", Aluminum, Late 2008';
+    if (/4[_,]1/.test(code)) return '13", Late 2007';
+    if (/3[_,]1/.test(code)) return '13", Late 2007';
+    if (/2[_,]1/.test(code)) return '13", Mid 2007';
+    if (/1[_,]1/.test(code)) return 'Original Model';
+    return opts.noMatchString;
   }
 
-  function _convertImac(code) {
+  function _convertImac(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /17[_,]2/.test(code): return '(Retina 5K, 27-inch, Late 2015)';
-      case /16[_,]2/.test(code): return '(Retina 4K, 21.5-inch, Late 2015)';
-      case /16[_,]1/.test(code): return '(21.5-inch, Late 2015)';
-      case /15[_,]1/.test(code): return '(Retina 5K, 27-inch, Mid 2015)';
-      case /15[_,]1/.test(code): return '(Retina 5K, 27-inch, Mid 2015)';
-      case /14[_,]4/.test(code): return '(21.5-inch, Mid 2014)';
-      case /14[_,]2/.test(code): return '(27-inch, Late 2013)';
-      case /14[_,]1/.test(code): return '(21.5-inch, Late 2013)';
-      case /13[_,]2/.test(code): return '(27-inch, Late 2012)';
-      case /13[_,]1/.test(code): return '(21.5-inch, Late 2012)';
-      case /12[_,]2/.test(code): return '(27-inch, Mid 2011)';
-      case /12[_,]1/.test(code): return '(21.5-inch, Mid 2011)';
-      case /11[_,]3/.test(code): return '(27-inch, Mid 2010)';
-      case /11[_,]2/.test(code): return '(21.5-inch, Mid 2010)';
-      case /10[_,]1/.test(code): return '(Late 2009)';
-      case /9[_,]1/.test(code): return '(Early 2009)';
-      case /8[_,]1/.test(code): return '(Early 2008)';
-      case /7[_,]1/.test(code): return '(Mid 2007)';
-    }
+    if (/17[_,]2/.test(code)) return 'Retina 5K, 27", Late 2015';
+    if (/16[_,]2/.test(code)) return 'Retina 4K, 21.5", Late 2015';
+    if (/16[_,]1/.test(code)) return '21.5", Late 2015';
+    if (/15[_,]1/.test(code)) return 'Retina 5K, 27", Mid 2015';
+    if (/15[_,]1/.test(code)) return 'Retina 5K, 27", Mid 2015';
+    if (/14[_,]4/.test(code)) return '21.5", Mid 2014';
+    if (/14[_,]2/.test(code)) return '27", Late 2013';
+    if (/14[_,]1/.test(code)) return '21.5", Late 2013';
+    if (/13[_,]2/.test(code)) return '27", Late 2012';
+    if (/13[_,]1/.test(code)) return '21.5", Late 2012';
+    if (/12[_,]2/.test(code)) return '27", Mid 2011';
+    if (/12[_,]1/.test(code)) return '21.5", Mid 2011';
+    if (/11[_,]3/.test(code)) return '27", Mid 2010';
+    if (/11[_,]2/.test(code)) return '21.5", Mid 2010';
+    if (/10[_,]1/.test(code)) return 'Late 2009';
+    if (/9[_,]1/.test(code)) return 'Early 2009';
+    if (/8[_,]1/.test(code)) return 'Early 2008';
+    if (/7[_,]1/.test(code)) return 'Mid 2007';
+    return opts.noMatchString;
   }
 
-  function _convertMacMini(code) {
+  function _convertMacMini(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /7[_,][1-3]/.test(code): return '(Late 2014)';
-      case /6[_,][1-2]/.test(code): return '(Late 2012)';
-      case /5[_,][1-3]/.test(code): return '(Mid 2011)';
-      case /5[_,][1-3]/.test(code): return '(Mid 2011)';
-      case /4[_,]1/.test(code): return '(Mid 2010)';
-      case /3[_,]1/.test(code): return '(Early/Late 2009)';
-      case /2[_,]1/.test(code): return '(Mid 2007)';
-      case /1[_,]1/.test(code): return '(Early/Late 2006)';
-    }
+    if (/7[_,][1-3]/.test(code)) return 'Late 2014';
+    if (/6[_,][1-2]/.test(code)) return 'Late 2012';
+    if (/5[_,][1-3]/.test(code)) return 'Mid 2011';
+    if (/5[_,][1-3]/.test(code)) return 'Mid 2011';
+    if (/4[_,]1/.test(code)) return 'Mid 2010';
+    if (/3[_,]1/.test(code)) return 'Early/Late 2009';
+    if (/2[_,]1/.test(code)) return 'Mid 2007';
+    if (/1[_,]1/.test(code)) return 'Early/Late 2006';
+    return opts.noMatchString;
   }
 
-  function _convertMacPro(code) {
+  function _convertMacPro(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /6[_,]1/.test(code): return '(Late 2013)';
-      case /5[_,]1/.test(code): return '(Mid 2012)';
-    }
+    if (/6[_,]1/.test(code)) return 'Late 2013';
+    if (/5[_,]1/.test(code)) return 'Mid 2012';
+    return opts.noMatchString;
   }
 
-  function _convertIphone(code) {
+  function _convertIphone(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /8[_,]4/.test(code): return 'SE';
-      case /8[_,]2/.test(code): return '6s Plus';
-      case /8[_,]1/.test(code): return '6s';
-      case /7[_,]2/.test(code): return '6';
-      case /7[_,]1/.test(code): return '6 Plus';
-      case /6[_,]\d/.test(code): return '5s';
-      case /5[_,][34]/.test(code): return '5c';
-      case /5[_,]\d/.test(code): return '5';
-      case /4[_,]\d/.test(code): return '4s';
-      case /3[_,]\d/.test(code): return '4';
-      case /2[_,]\d/.test(code): return '3GS';
-      case /1[_,]2/.test(code): return '3G';
-      case /1[_,]1/.test(code): return '1';
-    }
+    if (/8[_,]4/.test(code)) return 'SE';
+    if (/8[_,]2/.test(code)) return '6s Plus';
+    if (/8[_,]1/.test(code)) return '6s';
+    if (/7[_,]2/.test(code)) return '6';
+    if (/7[_,]1/.test(code)) return '6 Plus';
+    if (/6[_,]\d/.test(code)) return '5s';
+    if (/5[_,][34]/.test(code)) return '5c';
+    if (/5[_,]\d/.test(code)) return '5';
+    if (/4[_,]\d/.test(code)) return '4s';
+    if (/3[_,]\d/.test(code)) return '4';
+    if (/2[_,]\d/.test(code)) return '3GS';
+    if (/1[_,]2/.test(code)) return '3G';
+    if (/1[_,]1/.test(code)) return '1';
+    return opts.noMatchString;
   }
 
-  function _convertIpod(code) {
+  function _convertIpod(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /7[_,]\d/.test(code): return '6G';
-      case /5[_,]\d/.test(code): return '5G';
-      case /4[_,]\d/.test(code): return '4G';
-      case /3[_,]\d/.test(code): return '3G';
-      case /2[_,]\d/.test(code): return '2G';
-      case /1[_,]\d/.test(code): return '1G';
-    }
+    if (/7[_,]\d/.test(code)) return '6G';
+    if (/5[_,]\d/.test(code)) return '5G';
+    if (/4[_,]\d/.test(code)) return '4G';
+    if (/3[_,]\d/.test(code)) return '3G';
+    if (/2[_,]\d/.test(code)) return '2G';
+    if (/1[_,]\d/.test(code)) return '1G';
+    return opts.noMatchString;
   }
 
-  function _convertIpad(code) {
+  function _convertIpad(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /6[_,][7-8]/.test(code): return 'Pro (12.9 inch)';
-      case /6[_,][3-4]/.test(code): return 'Pro (9.7 inch)';
-      case /5[_,][3-4]/.test(code): return 'Air 2';
-      case /5[_,][1-2]/.test(code): return 'Mini 4';
-      case /4[_,][7-9]/.test(code): return 'Mini 3';
-      case /4[_,][4-6]/.test(code): return 'Mini 2';
-      case /4[_,][1-3]/.test(code): return 'Air';
-      case /3[_,][4-6]/.test(code): return '4';
-      case /3[_,][1-3]/.test(code): return '3';
-      case /2[_,][5-7]/.test(code): return 'Mini';
-      case /2[_,][1-4]/.test(code): return '2';
-      case /1[_,]\d/.test(code): return '1';
-    }
+    if (/6[_,][7-8]/.test(code)) return 'Pro (12.9 inch)';
+    if (/6[_,][3-4]/.test(code)) return 'Pro (9.7 inch)';
+    if (/5[_,][3-4]/.test(code)) return 'Air 2';
+    if (/5[_,][1-2]/.test(code)) return 'Mini 4';
+    if (/4[_,][7-9]/.test(code)) return 'Mini 3';
+    if (/4[_,][4-6]/.test(code)) return 'Mini 2';
+    if (/4[_,][1-3]/.test(code)) return 'Air';
+    if (/3[_,][4-6]/.test(code)) return '4';
+    if (/3[_,][1-3]/.test(code)) return '3';
+    if (/2[_,][5-7]/.test(code)) return 'Mini';
+    if (/2[_,][1-4]/.test(code)) return '2';
+    if (/1[_,]\d/.test(code)) return '1';
+    return opts.noMatchString;
   }
 
-  function _convertTv(code) {
+  function _convertTv(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /5[_,]\d/.test(code): return '4th G';
-      case /3[_,]\d/.test(code): return '3rd G';
-      case /2[_,]\d/.test(code): return '2nd G';
-    }
+    if (/5[_,]\d/.test(code)) return '4th G';
+    if (/3[_,]\d/.test(code)) return '3rd G';
+    if (/2[_,]\d/.test(code)) return '2nd G';
+    return opts.noMatchString;
   }
 
-  function _convertWatch(code) {
+  function _convertWatch(code, opts) {
     if (!code) return;
-    switch (true) {
-      case /1[_,]\d/.test(code): return '1st G';
-    }
+    if (/1[_,]\d/.test(code)) return '1st G';
+    return opts.noMatchString;
   }
 
-  function getAppleModelName(str, options) {
-    options = typeof options === 'undefined' ? {} : options;
+  function _parseOptions(opts) {
+    opts = typeof opts === 'undefined' ? {} : opts;
+    opts.noMatchString = opts.noMatchString || '(Other)';
+    return opts;
+  }
+
+  function getAppleModelName(str, opts) {
     if (!str || typeof str !== 'string') return;
+    opts = _parseOptions(opts);
 
     var result = [str];
     if (str.match(/simulator/i)) {
@@ -189,30 +184,32 @@
     } else if (str.match(/ios/i)) {
       result = ['iOS']; // Simulator device
     } else if (m = str.match(/iphone\s?(.*)/i)) {
-      result = ['iPhone', _convertIphone(m[1])];
+      result = ['iPhone', _convertIphone(m[1], opts)];
     } else if (m = str.match(/ipad\s?(.*)/i)) {
-      result = ['iPad', _convertIpad(m[1])];
+      result = ['iPad', _convertIpad(m[1], opts)];
     } else if (m = str.match(/ipod\s?(.*)/i)) {
-      result = ['iPod touch', _convertIpod(m[1])];
+      result = ['iPod touch', _convertIpod(m[1], opts)];
     } else if (m = str.match(/macbookpro\s?(.*)/i)) {
-      result = ['MacBook Pro', _convertMacbookPro(m[1])];
+      result = ['MacBook Pro', _convertMacbookPro(m[1], opts)];
     } else if (m = str.match(/macbookair\s?(.*)/i)) {
-      result = ['MacBook Air', _convertMacbookAir(m[1])];
+      result = ['MacBook Air', _convertMacbookAir(m[1], opts)];
     } else if (m = str.match(/macbook\s?(.*)/i)) {
-      result = ['MacBook', _convertMacbook(m[1])];
+      result = ['MacBook', _convertMacbook(m[1], opts)];
     } else if (m = str.match(/imac\s?(.*)/i)) {
-      result = ['iMac', _convertImac(m[1])];
+      result = ['iMac', _convertImac(m[1], opts)];
     } else if (m = str.match(/macmini\s?(.*)/i)) {
-      result = ['Mac mini', _convertMacMini(m[1])];
+      result = ['Mac mini', _convertMacMini(m[1], opts)];
     } else if (m = str.match(/macpro\s?(.*)/i)) {
-      result = ['Mac Pro', _convertMacPro(m[1])];
+      result = ['Mac Pro', _convertMacPro(m[1], opts)];
     } else if (m = str.match(/appletv\s?(.*)/i)) {
-      result = ['Apple TV', _convertTv(m[1])];
+      result = ['Apple TV', _convertTv(m[1], opts)];
     } else if (m = str.match(/watch\s?(.*)/i)) {
-      result = ['Apple Watch', _convertWatch(m[1])];
+      result = ['Apple Watch', _convertWatch(m[1], opts)];
+    } else {
+      result = [opts.noMatchString];
     }
 
-    if (!options.split) {
+    if (!opts.split) {
       result = result.join(' ').trim();
     }
     return result;

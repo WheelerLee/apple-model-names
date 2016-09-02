@@ -24,15 +24,20 @@ import getModelName from 'apple-model-names';
 
 getModelName('iPhone6,2'); // 'iPhone 5s'
 getModelName('iPhone6,2', { split: true }); // ['iPhone', '5s']
+
+// Examples with no matching result
+getModelName('iPhone99,9'); // 'iPhone (Other)'
+getModelName('iCrazy1,1'); // '(Other)'
 ```
 
 ## Options
 
 An options hash can be passed in as a second parameter to customize the return data. Here are the available options:
 
-Option | Description
------------- | -------------
-`split` | Return an array with the device and model split up (i.e. `['iPhone', '5s']`). This is useful when needing more fine-grained control, such as styling each piece of text differently in your UI.
+Option |  Default Value | Description
+------ |  ------------- | -----------
+`split` | `false` | Return an array with the device and model split up (i.e. `['iPhone', '5s']`). This is useful when needing more fine-grained control, such as styling each piece of text differently in your UI.
+`noMatchString` | `'(Other)'` | String to use when a match against the code or device name isn't found.
 
 ## Translation Sources
 
