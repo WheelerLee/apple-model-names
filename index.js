@@ -142,13 +142,13 @@
     if (/6[_,][7-8]/.test(code)) return 'Pro (12.9 inch)';
     if (/6[_,][3-4]/.test(code)) return 'Pro (9.7 inch)';
     if (/5[_,][3-4]/.test(code)) return 'Air 2';
-    if (/5[_,][1-2]/.test(code)) return 'Mini 4';
-    if (/4[_,][7-9]/.test(code)) return 'Mini 3';
-    if (/4[_,][4-6]/.test(code)) return 'Mini 2';
+    if (/5[_,][1-2]/.test(code)) return 'mini 4';
+    if (/4[_,][7-9]/.test(code)) return 'mini 3';
+    if (/4[_,][4-6]/.test(code)) return 'mini 2';
     if (/4[_,][1-3]/.test(code)) return 'Air';
     if (/3[_,][4-6]/.test(code)) return '4';
     if (/3[_,][1-3]/.test(code)) return '3';
-    if (/2[_,][5-7]/.test(code)) return 'Mini';
+    if (/2[_,][5-7]/.test(code)) return 'mini';
     if (/2[_,][1-4]/.test(code)) return '2';
     if (/1[_,]\d/.test(code)) return '1';
     return code;
@@ -182,7 +182,7 @@
     if (str.match(/simulator/i)) {
       result = ['Simulator'];
     } else if (str.match(/ios/i)) {
-      result = ['iOS']; // Simulator device
+      result = ['iOS (Simulator)'];
     } else if (m = str.match(/iphone\s?(.*)/i)) {
       result = ['iPhone', _convertIphone(m[1], opts)];
     } else if (m = str.match(/ipad\s?(.*)/i)) {
