@@ -1,6 +1,6 @@
 {
   "name": "apple-model-names",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert Apple hardware strings into human-readable names",
   "main": "index.js",
   "scripts": {
