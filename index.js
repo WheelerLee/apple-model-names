@@ -170,7 +170,7 @@
 
   function _parseOptions(opts) {
     opts = typeof opts === 'undefined' ? {} : opts;
-    opts.noMatchString = opts.noMatchString || '(Other)';
+    opts.noMatchString = opts.noMatchString || 'Other';
     return opts;
   }
 
