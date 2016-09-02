@@ -6,7 +6,7 @@
 
 ;(function () {
   function _convertMacbookPro(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/11[_,][4,5]/.test(code)) return 'Retina, 15", Mid 2015';
     if (/11[_,][2,3]/.test(code)) return 'Retina, 15", Mid 2014';
     if (/12[_,]1/.test(code)) return 'Retina, 13", Early 2015';
@@ -31,11 +31,11 @@
     if (/2[_,]1/.test(code)) return '17", Core 2 Duo';
     if (/1[_,]2/.test(code)) return '17"';
     if (/1[_,]1/.test(code)) return '15", Glossy';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertMacbookAir(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/7[_,]2/.test(code)) return '13", Early 2015';
     if (/7[_,]1/.test(code)) return '11", Early 2015';
     if (/6[_,]2/.test(code)) return '13", Mid 2013/Early 2014';
@@ -48,11 +48,11 @@
     if (/3[_,]1/.test(code)) return '11", Late 2010';
     if (/2[_,]1/.test(code)) return 'Late 2008/Mid 2009';
     if (/1[_,]1/.test(code)) return 'Original Model';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertMacbook(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/8[_,]1/.test(code)) return 'Retina, 12", Early 2015';
     if (/7[_,]1/.test(code)) return '13", Mid 2010';
     if (/6[_,]1/.test(code)) return '13", Late 2009';
@@ -62,11 +62,11 @@
     if (/3[_,]1/.test(code)) return '13", Late 2007';
     if (/2[_,]1/.test(code)) return '13", Mid 2007';
     if (/1[_,]1/.test(code)) return 'Original Model';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertImac(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/17[_,]2/.test(code)) return 'Retina 5K, 27", Late 2015';
     if (/16[_,]2/.test(code)) return 'Retina 4K, 21.5", Late 2015';
     if (/16[_,]1/.test(code)) return '21.5", Late 2015';
@@ -85,11 +85,11 @@
     if (/9[_,]1/.test(code)) return 'Early 2009';
     if (/8[_,]1/.test(code)) return 'Early 2008';
     if (/7[_,]1/.test(code)) return 'Mid 2007';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertMacMini(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/7[_,][1-3]/.test(code)) return 'Late 2014';
     if (/6[_,][1-2]/.test(code)) return 'Late 2012';
     if (/5[_,][1-3]/.test(code)) return 'Mid 2011';
@@ -98,18 +98,18 @@
     if (/3[_,]1/.test(code)) return 'Early/Late 2009';
     if (/2[_,]1/.test(code)) return 'Mid 2007';
     if (/1[_,]1/.test(code)) return 'Early/Late 2006';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertMacPro(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/6[_,]1/.test(code)) return 'Late 2013';
     if (/5[_,]1/.test(code)) return 'Mid 2012';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertIphone(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/8[_,]4/.test(code)) return 'SE';
     if (/8[_,]2/.test(code)) return '6s Plus';
     if (/8[_,]1/.test(code)) return '6s';
@@ -123,22 +123,22 @@
     if (/2[_,]\d/.test(code)) return '3GS';
     if (/1[_,]2/.test(code)) return '3G';
     if (/1[_,]1/.test(code)) return '1';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertIpod(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/7[_,]\d/.test(code)) return '6G';
     if (/5[_,]\d/.test(code)) return '5G';
     if (/4[_,]\d/.test(code)) return '4G';
     if (/3[_,]\d/.test(code)) return '3G';
     if (/2[_,]\d/.test(code)) return '2G';
     if (/1[_,]\d/.test(code)) return '1G';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertIpad(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/6[_,][7-8]/.test(code)) return 'Pro (12.9 inch)';
     if (/6[_,][3-4]/.test(code)) return 'Pro (9.7 inch)';
     if (/5[_,][3-4]/.test(code)) return 'Air 2';
@@ -151,21 +151,21 @@
     if (/2[_,][5-7]/.test(code)) return 'Mini';
     if (/2[_,][1-4]/.test(code)) return '2';
     if (/1[_,]\d/.test(code)) return '1';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertTv(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/5[_,]\d/.test(code)) return '4th G';
     if (/3[_,]\d/.test(code)) return '3rd G';
     if (/2[_,]\d/.test(code)) return '2nd G';
-    return opts.noMatchString;
+    return code;
   }
 
   function _convertWatch(code, opts) {
-    if (!code) return;
+    if (!code) return '';
     if (/1[_,]\d/.test(code)) return '1st G';
-    return opts.noMatchString;
+    return code;
   }
 
   function _parseOptions(opts) {

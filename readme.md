@@ -26,8 +26,8 @@ getModelName('iPhone6,2'); // 'iPhone 5s'
 getModelName('iPhone6,2', { split: true }); // ['iPhone', '5s']
 
 // Examples with no matching result
-getModelName('iPhone99,9'); // 'iPhone (Other)'
-getModelName('iCrazy1,1'); // '(Other)'
+getModelName('iPhone99,9'); // 'iPhone 99,9'
+getModelName('iCrazy1,1'); // 'Other'
 ```
 
 ## Options
@@ -37,7 +37,7 @@ An options hash can be passed in as a second parameter to customize the return d
 Option |  Default Value | Description
 ------ |  ------------- | -----------
 `split` | `false` | Return an array with the device and model split up (i.e. `['iPhone', '5s']`). This is useful when needing more fine-grained control, such as styling each piece of text differently in your UI.
-`noMatchString` | `'(Other)'` | String to use when a match against the code or device name isn't found.
+`noMatchString` | `'Other'` | The string to return for unrecognized device names.
 
 ## Translation Sources
 
