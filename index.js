@@ -166,7 +166,7 @@
 
   function _convertWatch(code, opts) {
     if (!code) return '';
-    if (/1[_,][3-4]/.test(code)) return 'Series 2';
+    if (/2[_,][3-4]/.test(code)) return 'Series 2';
     if (/1[_,][6-7]/.test(code)) return 'Series 1';
     if (/1[_,][1-2]/.test(code)) return '1st G';
     return code;
