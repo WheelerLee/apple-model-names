@@ -110,6 +110,8 @@
 
   function _convertIphone(code, opts) {
     if (!code) return '';
+    if (/9[_,][24]/.test(code)) return '7 Plus';
+    if (/9[_,][13]/.test(code)) return '7';
     if (/8[_,]4/.test(code)) return 'SE';
     if (/8[_,]2/.test(code)) return '6s Plus';
     if (/8[_,]1/.test(code)) return '6s';
@@ -164,7 +166,9 @@
 
   function _convertWatch(code, opts) {
     if (!code) return '';
-    if (/1[_,]\d/.test(code)) return '1st G';
+    if (/1[_,][3-4]/.test(code)) return 'Series 2';
+    if (/1[_,][6-7]/.test(code)) return 'Series 1';
+    if (/1[_,][1-2]/.test(code)) return '1st G';
     return code;
   }
 
