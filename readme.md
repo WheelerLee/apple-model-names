@@ -43,13 +43,13 @@ Option |  Default Value | Description
 
 The translations are human-curated from various Apple support links and wiki pages. Here are the resources we use:
 
-- [https://www.theiphonewiki.com/wiki/Models]() (iPhone, iPad, iPod, Apple Watch, Apple TV)
-- [https://support.apple.com/en-us/HT201608]() (MacBook)
-- [https://support.apple.com/en-us/HT201862]() (MacBook Air)
-- [https://support.apple.com/en-us/HT201300]() (MacBook Pro)
-- [https://en.wikipedia.org/wiki/Mac_Mini]() (Mac mini)
-- [https://support.apple.com/en-us/HT202888]() (Mac Pro)
-- [https://support.apple.com/en-us/HT201634]() (iMac)
+- [https://www.theiphonewiki.com/wiki/Models](https://www.theiphonewiki.com/wiki/Models) (iPhone, iPad, iPod, Apple Watch, Apple TV)
+- [https://support.apple.com/en-us/HT201608](https://support.apple.com/en-us/HT201608) (MacBook)
+- [https://support.apple.com/en-us/HT201862](https://support.apple.com/en-us/HT201862) (MacBook Air)
+- [https://support.apple.com/en-us/HT201300](https://support.apple.com/en-us/HT201300) (MacBook Pro)
+- [https://en.wikipedia.org/wiki/Mac_Mini](https://en.wikipedia.org/wiki/Mac_Mini) (Mac mini)
+- [https://support.apple.com/en-us/HT202888](https://support.apple.com/en-us/HT202888) (Mac Pro)
+- [https://support.apple.com/en-us/HT201634](https://support.apple.com/en-us/HT201634) (iMac)
 
 ## Missing a new model? Found a bug?
 
