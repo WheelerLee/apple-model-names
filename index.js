@@ -7,168 +7,168 @@
 ;(function () {
   function _convertMacbookPro(code, opts) {
     if (!code) return '';
-    if (/11[_,][4,5]/.test(code)) return 'Retina, 15", Mid 2015';
-    if (/11[_,][2,3]/.test(code)) return 'Retina, 15", Mid 2014';
-    if (/12[_,]1/.test(code)) return 'Retina, 13", Early 2015';
-    if (/11[_,]1/.test(code)) return 'Retina, 13", Mid 2014';
-    if (/10[_,]2/.test(code)) return 'Retina, 13", Early 2013';
-    if (/10[_,]1/.test(code)) return 'Retina, 15", Early 2013';
-    if (/9[_,]2/.test(code)) return '13", Mid 2012';
-    if (/9[_,]1/.test(code)) return '15", Mid 2012';
-    if (/8[_,]3/.test(code)) return '17", Late 2011';
-    if (/8[_,]2/.test(code)) return '15", Late 2011';
-    if (/8[_,]1/.test(code)) return '13", Late 2011';
-    if (/7[_,]1/.test(code)) return '13", Mid 2010';
-    if (/6[_,]2/.test(code)) return '15", Mid 2010';
-    if (/6[_,]1/.test(code)) return '17", Mid 2010';
-    if (/5[_,]5/.test(code)) return '13", Mid 2009';
-    if (/5[_,]3/.test(code)) return '15", Mid 2009';
-    if (/5[_,]2/.test(code)) return '17", Mid 2009';
-    if (/5[_,]1/.test(code)) return 'Late 2008';
-    if (/4[_,]1/.test(code)) return 'Early 2008';
-    if (/3[_,]1/.test(code)) return 'Late 2007';
-    if (/2[_,]2/.test(code)) return '15", Core 2 Duo';
-    if (/2[_,]1/.test(code)) return '17", Core 2 Duo';
-    if (/1[_,]2/.test(code)) return '17"';
-    if (/1[_,]1/.test(code)) return '15", Glossy';
+    if (/^11[_,][4,5]$/.test(code)) return 'Retina, 15", Mid 2015';
+    if (/^11[_,][2,3]$/.test(code)) return 'Retina, 15", Mid 2014';
+    if (/^12[_,]1$/.test(code)) return 'Retina, 13", Early 2015';
+    if (/^11[_,]1$/.test(code)) return 'Retina, 13", Mid 2014';
+    if (/^10[_,]2$/.test(code)) return 'Retina, 13", Early 2013';
+    if (/^10[_,]1$/.test(code)) return 'Retina, 15", Early 2013';
+    if (/^9[_,]2$/.test(code)) return '13", Mid 2012';
+    if (/^9[_,]1$/.test(code)) return '15", Mid 2012';
+    if (/^8[_,]3$/.test(code)) return '17", Late 2011';
+    if (/^8[_,]2$/.test(code)) return '15", Late 2011';
+    if (/^8[_,]1$/.test(code)) return '13", Late 2011';
+    if (/^7[_,]1$/.test(code)) return '13", Mid 2010';
+    if (/^6[_,]2$/.test(code)) return '15", Mid 2010';
+    if (/^6[_,]1$/.test(code)) return '17", Mid 2010';
+    if (/^5[_,]5$/.test(code)) return '13", Mid 2009';
+    if (/^5[_,]3$/.test(code)) return '15", Mid 2009';
+    if (/^5[_,]2$/.test(code)) return '17", Mid 2009';
+    if (/^5[_,]1$/.test(code)) return 'Late 2008';
+    if (/^4[_,]1$/.test(code)) return 'Early 2008';
+    if (/^3[_,]1$/.test(code)) return 'Late 2007';
+    if (/^2[_,]2$/.test(code)) return '15", Core 2 Duo';
+    if (/^2[_,]1$/.test(code)) return '17", Core 2 Duo';
+    if (/^1[_,]2$/.test(code)) return '17"';
+    if (/^1[_,]1$/.test(code)) return '15", Glossy';
     return code;
   }
 
   function _convertMacbookAir(code, opts) {
     if (!code) return '';
-    if (/7[_,]2/.test(code)) return '13", Early 2015';
-    if (/7[_,]1/.test(code)) return '11", Early 2015';
-    if (/6[_,]2/.test(code)) return '13", Mid 2013/Early 2014';
-    if (/6[_,]1/.test(code)) return '11", Mid 2013/Early 2014';
-    if (/5[_,]2/.test(code)) return '13", Mid 2012';
-    if (/5[_,]1/.test(code)) return '11", Mid 2012';
-    if (/4[_,]2/.test(code)) return '13", Mid 2011';
-    if (/4[_,]1/.test(code)) return '11", Mid 2011';
-    if (/3[_,]2/.test(code)) return '13", Late 2010';
-    if (/3[_,]1/.test(code)) return '11", Late 2010';
-    if (/2[_,]1/.test(code)) return 'Late 2008/Mid 2009';
-    if (/1[_,]1/.test(code)) return 'Original Model';
+    if (/^7[_,]2$/.test(code)) return '13", Early 2015';
+    if (/^7[_,]1$/.test(code)) return '11", Early 2015';
+    if (/^6[_,]2$/.test(code)) return '13", Mid 2013/Early 2014';
+    if (/^6[_,]1$/.test(code)) return '11", Mid 2013/Early 2014';
+    if (/^5[_,]2$/.test(code)) return '13", Mid 2012';
+    if (/^5[_,]1$/.test(code)) return '11", Mid 2012';
+    if (/^4[_,]2$/.test(code)) return '13", Mid 2011';
+    if (/^4[_,]1$/.test(code)) return '11", Mid 2011';
+    if (/^3[_,]2$/.test(code)) return '13", Late 2010';
+    if (/^3[_,]1$/.test(code)) return '11", Late 2010';
+    if (/^2[_,]1$/.test(code)) return 'Late 2008/Mid 2009';
+    if (/^1[_,]1$/.test(code)) return 'Original Model';
     return code;
   }
 
   function _convertMacbook(code, opts) {
     if (!code) return '';
-    if (/8[_,]1/.test(code)) return 'Retina, 12", Early 2015';
-    if (/7[_,]1/.test(code)) return '13", Mid 2010';
-    if (/6[_,]1/.test(code)) return '13", Late 2009';
-    if (/5[_,]2/.test(code)) return '13", Mid 2009';
-    if (/5[_,]1/.test(code)) return '13", Aluminum, Late 2008';
-    if (/4[_,]1/.test(code)) return '13", Late 2007';
-    if (/3[_,]1/.test(code)) return '13", Late 2007';
-    if (/2[_,]1/.test(code)) return '13", Mid 2007';
-    if (/1[_,]1/.test(code)) return 'Original Model';
+    if (/^8[_,]1$/.test(code)) return 'Retina, 12", Early 2015';
+    if (/^7[_,]1$/.test(code)) return '13", Mid 2010';
+    if (/^6[_,]1$/.test(code)) return '13", Late 2009';
+    if (/^5[_,]2$/.test(code)) return '13", Mid 2009';
+    if (/^5[_,]1$/.test(code)) return '13", Aluminum, Late 2008';
+    if (/^4[_,]1$/.test(code)) return '13", Late 2007';
+    if (/^3[_,]1$/.test(code)) return '13", Late 2007';
+    if (/^2[_,]1$/.test(code)) return '13", Mid 2007';
+    if (/^1[_,]1$/.test(code)) return 'Original Model';
     return code;
   }
 
   function _convertImac(code, opts) {
     if (!code) return '';
-    if (/17[_,]2/.test(code)) return 'Retina 5K, 27", Late 2015';
-    if (/16[_,]2/.test(code)) return 'Retina 4K, 21.5", Late 2015';
-    if (/16[_,]1/.test(code)) return '21.5", Late 2015';
-    if (/15[_,]1/.test(code)) return 'Retina 5K, 27", Mid 2015';
-    if (/15[_,]1/.test(code)) return 'Retina 5K, 27", Mid 2015';
-    if (/14[_,]4/.test(code)) return '21.5", Mid 2014';
-    if (/14[_,]2/.test(code)) return '27", Late 2013';
-    if (/14[_,]1/.test(code)) return '21.5", Late 2013';
-    if (/13[_,]2/.test(code)) return '27", Late 2012';
-    if (/13[_,]1/.test(code)) return '21.5", Late 2012';
-    if (/12[_,]2/.test(code)) return '27", Mid 2011';
-    if (/12[_,]1/.test(code)) return '21.5", Mid 2011';
-    if (/11[_,]3/.test(code)) return '27", Mid 2010';
-    if (/11[_,]2/.test(code)) return '21.5", Mid 2010';
-    if (/10[_,]1/.test(code)) return 'Late 2009';
-    if (/9[_,]1/.test(code)) return 'Early 2009';
-    if (/8[_,]1/.test(code)) return 'Early 2008';
-    if (/7[_,]1/.test(code)) return 'Mid 2007';
+    if (/^17[_,]2$/.test(code)) return 'Retina 5K, 27", Late 2015';
+    if (/^16[_,]2$/.test(code)) return 'Retina 4K, 21.5", Late 2015';
+    if (/^16[_,]1$/.test(code)) return '21.5", Late 2015';
+    if (/^15[_,]1$/.test(code)) return 'Retina 5K, 27", Mid 2015';
+    if (/^15[_,]1$/.test(code)) return 'Retina 5K, 27", Mid 2015';
+    if (/^14[_,]4$/.test(code)) return '21.5", Mid 2014';
+    if (/^14[_,]2$/.test(code)) return '27", Late 2013';
+    if (/^14[_,]1$/.test(code)) return '21.5", Late 2013';
+    if (/^13[_,]2$/.test(code)) return '27", Late 2012';
+    if (/^13[_,]1$/.test(code)) return '21.5", Late 2012';
+    if (/^12[_,]2$/.test(code)) return '27", Mid 2011';
+    if (/^12[_,]1$/.test(code)) return '21.5", Mid 2011';
+    if (/^11[_,]3$/.test(code)) return '27", Mid 2010';
+    if (/^11[_,]2$/.test(code)) return '21.5", Mid 2010';
+    if (/^10[_,]1$/.test(code)) return 'Late 2009';
+    if (/^9[_,]1$/.test(code)) return 'Early 2009';
+    if (/^8[_,]1$/.test(code)) return 'Early 2008';
+    if (/^7[_,]1$/.test(code)) return 'Mid 2007';
     return code;
   }
 
   function _convertMacMini(code, opts) {
     if (!code) return '';
-    if (/7[_,][1-3]/.test(code)) return 'Late 2014';
-    if (/6[_,][1-2]/.test(code)) return 'Late 2012';
-    if (/5[_,][1-3]/.test(code)) return 'Mid 2011';
-    if (/5[_,][1-3]/.test(code)) return 'Mid 2011';
-    if (/4[_,]1/.test(code)) return 'Mid 2010';
-    if (/3[_,]1/.test(code)) return 'Early/Late 2009';
-    if (/2[_,]1/.test(code)) return 'Mid 2007';
-    if (/1[_,]1/.test(code)) return 'Early/Late 2006';
+    if (/^7[_,][1-3]$/.test(code)) return 'Late 2014';
+    if (/^6[_,][1-2]$/.test(code)) return 'Late 2012';
+    if (/^5[_,][1-3]$/.test(code)) return 'Mid 2011';
+    if (/^5[_,][1-3]$/.test(code)) return 'Mid 2011';
+    if (/^4[_,]1$/.test(code)) return 'Mid 2010';
+    if (/^3[_,]1$/.test(code)) return 'Early/Late 2009';
+    if (/^2[_,]1$/.test(code)) return 'Mid 2007';
+    if (/^1[_,]1$/.test(code)) return 'Early/Late 2006';
     return code;
   }
 
   function _convertMacPro(code, opts) {
     if (!code) return '';
-    if (/6[_,]1/.test(code)) return 'Late 2013';
-    if (/5[_,]1/.test(code)) return 'Mid 2012';
+    if (/^6[_,]1$/.test(code)) return 'Late 2013';
+    if (/^5[_,]1$/.test(code)) return 'Mid 2012';
     return code;
   }
 
   function _convertIphone(code, opts) {
     if (!code) return '';
-    if (/9[_,][24]/.test(code)) return '7 Plus';
-    if (/9[_,][13]/.test(code)) return '7';
-    if (/8[_,]4/.test(code)) return 'SE';
-    if (/8[_,]2/.test(code)) return '6s Plus';
-    if (/8[_,]1/.test(code)) return '6s';
-    if (/7[_,]2/.test(code)) return '6';
-    if (/7[_,]1/.test(code)) return '6 Plus';
-    if (/6[_,]\d/.test(code)) return '5s';
-    if (/5[_,][34]/.test(code)) return '5c';
-    if (/5[_,]\d/.test(code)) return '5';
-    if (/4[_,]\d/.test(code)) return '4s';
-    if (/3[_,]\d/.test(code)) return '4';
-    if (/2[_,]\d/.test(code)) return '3GS';
-    if (/1[_,]2/.test(code)) return '3G';
-    if (/1[_,]1/.test(code)) return '1';
+    if (/^9[_,][24]$/.test(code)) return '7 Plus';
+    if (/^9[_,][13]$/.test(code)) return '7';
+    if (/^8[_,]4$/.test(code)) return 'SE';
+    if (/^8[_,]2$/.test(code)) return '6s Plus';
+    if (/^8[_,]1$/.test(code)) return '6s';
+    if (/^7[_,]2$/.test(code)) return '6';
+    if (/^7[_,]1$/.test(code)) return '6 Plus';
+    if (/^6[_,]\d$/.test(code)) return '5s';
+    if (/^5[_,][34]$/.test(code)) return '5c';
+    if (/^5[_,]\d$/.test(code)) return '5';
+    if (/^4[_,]\d$/.test(code)) return '4s';
+    if (/^3[_,]\d$/.test(code)) return '4';
+    if (/^2[_,]\d$/.test(code)) return '3GS';
+    if (/^1[_,]2$/.test(code)) return '3G';
+    if (/^1[_,]1$/.test(code)) return '1';
     return code;
   }
 
   function _convertIpod(code, opts) {
     if (!code) return '';
-    if (/7[_,]\d/.test(code)) return '6G';
-    if (/5[_,]\d/.test(code)) return '5G';
-    if (/4[_,]\d/.test(code)) return '4G';
-    if (/3[_,]\d/.test(code)) return '3G';
-    if (/2[_,]\d/.test(code)) return '2G';
-    if (/1[_,]\d/.test(code)) return '1G';
+    if (/^7[_,]\d$/.test(code)) return '6G';
+    if (/^5[_,]\d$/.test(code)) return '5G';
+    if (/^4[_,]\d$/.test(code)) return '4G';
+    if (/^3[_,]\d$/.test(code)) return '3G';
+    if (/^2[_,]\d$/.test(code)) return '2G';
+    if (/^1[_,]\d$/.test(code)) return '1G';
     return code;
   }
 
   function _convertIpad(code, opts) {
     if (!code) return '';
-    if (/6[_,][7-8]/.test(code)) return 'Pro (12.9 inch)';
-    if (/6[_,][3-4]/.test(code)) return 'Pro (9.7 inch)';
-    if (/5[_,][3-4]/.test(code)) return 'Air 2';
-    if (/5[_,][1-2]/.test(code)) return 'mini 4';
-    if (/4[_,][7-9]/.test(code)) return 'mini 3';
-    if (/4[_,][4-6]/.test(code)) return 'mini 2';
-    if (/4[_,][1-3]/.test(code)) return 'Air';
-    if (/3[_,][4-6]/.test(code)) return '4';
-    if (/3[_,][1-3]/.test(code)) return '3';
-    if (/2[_,][5-7]/.test(code)) return 'mini';
-    if (/2[_,][1-4]/.test(code)) return '2';
-    if (/1[_,]\d/.test(code)) return '1';
+    if (/^6[_,][7-8]$/.test(code)) return 'Pro (12.9 inch)';
+    if (/^6[_,][3-4]$/.test(code)) return 'Pro (9.7 inch)';
+    if (/^5[_,][3-4]$/.test(code)) return 'Air 2';
+    if (/^5[_,][1-2]$/.test(code)) return 'mini 4';
+    if (/^4[_,][7-9]$/.test(code)) return 'mini 3';
+    if (/^4[_,][4-6]$/.test(code)) return 'mini 2';
+    if (/^4[_,][1-3]$/.test(code)) return 'Air';
+    if (/^3[_,][4-6]$/.test(code)) return '4';
+    if (/^3[_,][1-3]$/.test(code)) return '3';
+    if (/^2[_,][5-7]$/.test(code)) return 'mini';
+    if (/^2[_,][1-4]$/.test(code)) return '2';
+    if (/^1[_,]\d$/.test(code)) return '1';
     return code;
   }
 
   function _convertTv(code, opts) {
     if (!code) return '';
-    if (/5[_,]\d/.test(code)) return '4th G';
-    if (/3[_,]\d/.test(code)) return '3rd G';
-    if (/2[_,]\d/.test(code)) return '2nd G';
+    if (/^5[_,]\d$/.test(code)) return '4th G';
+    if (/^3[_,]\d$/.test(code)) return '3rd G';
+    if (/^2[_,]\d$/.test(code)) return '2nd G';
     return code;
   }
 
   function _convertWatch(code, opts) {
     if (!code) return '';
-    if (/2[_,][3-4]/.test(code)) return 'Series 2';
-    if (/1[_,][6-7]/.test(code)) return 'Series 1';
-    if (/1[_,][1-2]/.test(code)) return '1st G';
+    if (/^2[_,][3-4]$/.test(code)) return 'Series 2';
+    if (/^1[_,][6-7]$/.test(code)) return 'Series 1';
+    if (/^1[_,][1-2]$/.test(code)) return '1st G';
     return code;
   }
 
