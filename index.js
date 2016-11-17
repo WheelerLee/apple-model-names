@@ -7,6 +7,9 @@
 ;(function () {
   function _convertMacbookPro(code, opts) {
     if (!code) return '';
+    if (/^13[_,]3$/.test(code)) return 'Retina, 15", Late 2016';
+    if (/^13[_,]2$/.test(code)) return 'Retina, 13", Late 2016, Four Thunderbolt 3 ports';
+    if (/^13[_,]1$/.test(code)) return 'Retina, 13", Late 2016, Two Thunderbolt 3 ports';
     if (/^11[_,][4,5]$/.test(code)) return 'Retina, 15", Mid 2015';
     if (/^11[_,][2,3]$/.test(code)) return 'Retina, 15", Mid 2014';
     if (/^12[_,]1$/.test(code)) return 'Retina, 13", Early 2015';
