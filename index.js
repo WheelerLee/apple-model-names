@@ -110,6 +110,9 @@
 
   function _convertIphone(code, opts) {
     if (!code) return '';
+    if (/^10[_,][36]$/.test(code)) return 'X';
+    if (/^10[_,][25]$/.test(code)) return '8 Plus';
+    if (/^10[_,][14]$/.test(code)) return '8';
     if (/^9[_,][24]$/.test(code)) return '7 Plus';
     if (/^9[_,][13]$/.test(code)) return '7';
     if (/^8[_,]4$/.test(code)) return 'SE';
